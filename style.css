@@ -816,3 +816,132 @@ footer {
 .project-popup img:hover {
   transform: scale(1.1);
 }
+
+.laboratory {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.lab-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.lab-card:hover {
+  transform: translateY(-5px);
+}
+
+.lab-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 220px;
+}
+
+.lab-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.lab-card:hover img {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.view-btn {
+  position: absolute;
+  display: none;
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.lab-image:hover .view-btn {
+  display: block;
+}
+
+.view-btn:hover {
+  background: #5a67d8;
+}
+
+.lab-content {
+  padding: 20px;
+}
+
+.lab-number {
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 equal columns in one row */
+  gap: 20px;
+  justify-items: center;
+}
+
+.lab-card {
+  width: 100%;
+  max-width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.lab-card:hover {
+  transform: translateY(-5px);
+}
+
+.lab-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.lab-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.view-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #667eea;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lab-image:hover .view-btn {
+  opacity: 1;
+}
+
+.lab-content {
+  padding: 10px;
+}
