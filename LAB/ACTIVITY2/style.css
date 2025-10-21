@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe6eb; 
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav {
+    background-color: #ff6f91; 
+    padding: 15px 0;
+}
+
+article, section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+article img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #ff6f91;
+    padding: 10px;
+}
+
+thead {
+    background-color: #ff6f91; 
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffe6eb; 
+}
+
+
+form input, form textarea {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ff6f91;
+    margin-top: 5px;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    padding: 10px 20px;
+    background: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+p a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ff6f91;
+}
+
+
+footer {
+    margin-top: 30px;
+    padding: 15px;
+    
+    background: #ff6f91;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;  
+    font-weight: bold;
+    margin: 0 10px;
+}

@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  transition: 0.5s;
+}
+
+body.dark-mode {
+  background: #000;
+  color: #fff;
+}
+
+img {
+  width: 300px;
+  border-radius: 20%;
+  margin: 20px;
+  transition: 0.5s;
+}

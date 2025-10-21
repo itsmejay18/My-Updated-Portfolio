@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Info Card</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: system-ui, sans-serif;
+      transition: 0.5s;
+      background: #fff;
+      color: #000;
+    }
+
+    .card {
+      width: 280px;
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .card h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #333;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Hidden text */
+    #info {
+      display: none;
+      color: #555;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #667eea;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #764ba2;
+    }
+
+    /* Dark Mode */
+    body.darkmode {
+      background-color: #000;
+      color: white;
+    }
+
+    body.darkmode .card {
+      background: #1a1a1a;
+      color: white;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    body.darkmode p,
+    body.darkmode #info {
+      color: #ddd;
+    }
+
+    body.darkmode button {
+      background: white;
+      color: black;
+    }
+
+    body.darkmode button:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="b7209a4b-a6e5-42af-b21a-ea80ad5ed71a.jfif" alt="Profile Image">
+    <h1 id="title">Light Mode</h1>
+    <p>I am a Full Stack Developer based on</p>
+
+    <!-- Hidden info -->
+    <div id="info">
+      <p>I am a self-made programmer. My passion runs through my blood.</p>
+    </div>
+
+    <button id="toggleInfo">About Me</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
+
+  <script>
+    // Toggle hidden info text
+    document.getElementById("toggleInfo").addEventListener("click", function () {
+      const info = document.getElementById("info");
+      if (info.style.display === "block") {
+        info.style.display = "none";
+        this.textContent = "About Me";
+      } else {
+        info.style.display = "block";
+        this.textContent = "Show Less";
+      }
+    });
+
+    // Toggle dark mode
+    function toggleDarkMode() {
+      const body = document.body;
+      const title = document.getElementById("title");
+
+      body.classList.toggle("darkmode");
+
+      if (body.classList.contains("darkmode")) {
+        title.textContent = "Dark Mode";
+      } else {
+        title.textContent = "Light Mode";
+      }
+    }
+  </script>
+</body>
+</html>
